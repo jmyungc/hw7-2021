@@ -83,18 +83,12 @@ document.querySelector("#slider").addEventListener("change", function() {
 	console.log("Volume is " + vid.volume);
 });
 
+document.querySelector("#vintage").addEventListener("click", function() {
+	vid.className = "oldSchool";
+});
 
 
-// Styled --> utilize existing oldSchool class on the video element
-
-
-
-// Original --> remove the oldSchool class from the video
-
-
-
-
-// NOTES:
-// Many functions alter more than one DOM element, check code carefully!
-// Make sure that "speed up" is reverse of "slow down", so if you hit slow down then speed up you're at the original speed
+document.querySelector("#orig").addEventListener("click", function() {
+	vid.className = "video";
+});
 
