@@ -15,9 +15,9 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	vid.play();
-	vid.volume = 1.0;
 	document.querySelector("#volume").innerHTML = vid.volume * 100 + "%";
 	console.log("Volume is " + vid.volume*100);
+
 });
 
 // Pause Button --> pause video
@@ -74,14 +74,15 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 // Volume Slider --> change the volume based on slider + update information
 
-document.querySelector("#slider").addEventListener("change", function() {
+document.querySelector("#slider").addEventListener("click", function() {
 	var vid_vol = document.querySelector("#slider")
 	vid.volume = vid_vol.value / 100;
 
 	var volume_is = document.querySelector("#volume");
-	volume_is.innerHTML = vid.volume * 100 + "%";
+	volume_is.innerHTML = (vid.volume * 100) + "%";
 	console.log("Volume is " + vid.volume);
 });
+
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	vid.className = "oldSchool";
